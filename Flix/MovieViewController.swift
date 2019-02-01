@@ -39,14 +39,7 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
                 self.MovieTableView.reloadData()
                 
                 print(dataDictionary)
-                
-                // TODO: Get the array of movies
-                
-                
-                // TODO: Store the movies in a property to use elsewhere
-                
-                // TODO: Reload your table view data
-                
+
             }
         }
         task.resume()
@@ -57,6 +50,7 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
@@ -65,11 +59,20 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell") as! MovieCell
         let movie = movies[indexPath.row]
+        // grabbing/casting the API title
         let title = movie["title"] as! String
+        let synopsis = movie["overview"] as! String
         
-        cell.textLabel!.text = title
+        cell.titleLabel!.text = title
+        cell.synopsisLabel.text = synopsis
+        
+        // To access API for poster with included dimensions
+        let baseURL = "http://image.tmdb.org/t/p/w185/"
+        let posterPath = movie["poster_path"] as! String
+        // Concatenating the paths
+        let posterURL = URL(string: baseURL + posterPath)
         
         return cell
     }
