@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class MovieViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
 {
@@ -69,10 +70,12 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
         cell.synopsisLabel.text = synopsis
         
         // To access API for poster with included dimensions
-        let baseURL = "http://image.tmdb.org/t/p/w185/"
+        let baseURL = "https://image.tmdb.org/t/p/w185"
         let posterPath = movie["poster_path"] as! String
         // Concatenating the paths
         let posterURL = URL(string: baseURL + posterPath)
+        
+        cell.posterView.af_setImage(withURL: posterURL!)
         
         return cell
     }
