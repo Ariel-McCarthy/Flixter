@@ -56,6 +56,7 @@
                                             <outlet property="posterView" destination="hO0-YC-3gU" id="3bd-P7-xkI"/>
                                             <outlet property="synopsisLabel" destination="FSK-rX-YLJ" id="rEk-9e-a7b"/>
                                             <outlet property="titleLabel" destination="txL-cB-r2F" id="kPv-xd-nRG"/>
+                                            <segue destination="4mR-NW-GRE" kind="show" id="haG-mr-YgC"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -72,6 +73,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="476" y="133.5832083958021"/>
+        </scene>
+        <!--Movie Details View Controller-->
+        <scene sceneID="vqv-YH-cMS">
+            <objects>
+                <viewController id="4mR-NW-GRE" customClass="MovieDetailsViewController" customModule="Flix" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7XG-zK-wHG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="gLv-2x-KFv"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g8y-nS-rdu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1321" y="138"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WAS-39-avx">
