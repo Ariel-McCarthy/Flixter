@@ -11,9 +11,10 @@ import AlamofireImage
 
 class MovieViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
 {
+    @IBOutlet weak var MovieTableView: UITableView!
+    
     var movies = [[String: Any]]()
     
-    @IBOutlet weak var MovieTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
