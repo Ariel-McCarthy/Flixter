@@ -81,7 +81,6 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
         return cell
     }
     
-    
 
     
     // MARK: - Navigation
