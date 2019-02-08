@@ -40,7 +40,6 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
             }
         }
         task.resume()
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -85,7 +84,6 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-    print("loading")
         
         //find selected movie
         
