@@ -36,7 +36,6 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
                 
                 // reload table view
                 self.MovieTableView.reloadData()
-
             }
         }
         task.resume()
